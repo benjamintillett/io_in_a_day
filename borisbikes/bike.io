@@ -20,12 +20,6 @@ assertEqual := method(actual,expected,
 	result println
 )
 
-it := method(string, test,
-	string println
-	test
-	"\n" println	
-)
-
 It := Object clone do (	
 	bike1 := Bike clone
 	"bike should equal bike" println
