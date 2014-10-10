@@ -10,8 +10,6 @@ Bike := Object clone do (
 
 
 
-
-
 # TEST METHOD
 
 assertEqual := method(actual,expected,
