@@ -10,7 +10,16 @@ assertEqual := method(actual,expected,
 	result println
 )
 
-Stub := Object clone
+Double := Object clone do (
+	forward := method(arg,  
+			if(self methodList contains(call message name), result := "[32m Succesfuly recived "  .. (call message name) .. "[0m", result :=  "[31mFAIL[0m")
+			result println
+		)
+	expectToRecive := method(name, 
+		self methodList append(name) 
+	)
+	methodList := list()
+)
 
 
 
@@ -74,7 +83,9 @@ It := Object clone do (
 
 It := Object clone do (
 	oldStreet := DockingStation clone
-	person = Stub clone
+	person = Double clone
+	person expectToRecive
+
 
 
 
